@@ -1,0 +1,13 @@
+{
+  "Load": {
+    "levels": [
+      {
+        "layers": [
+          {
+            "name": "Layer 1"
+          }
+        ]
+      }
+    ]
+  }
+}

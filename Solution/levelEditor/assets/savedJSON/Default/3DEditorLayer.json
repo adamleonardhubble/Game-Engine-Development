@@ -1,0 +1,271 @@
+{
+  "Asyncload": {
+    "shaders": [
+      { "filepath": "assets/shaders/lighting.glsl" },
+      { "filepath": "assets/shaders/text2.glsl" }
+    ],
+    "fonts": [
+      {
+        "charSize": 16,
+        "filepath": "assets/fonts/arial_narrow_7.ttf"
+      },
+      {
+        "charSize": 32,
+        "filepath": "assets/fonts/arial_narrow_7.ttf"
+      },
+      {
+        "charSize": 64,
+        "filepath": "assets/fonts/arial_narrow_7.ttf"
+      },
+      {
+        "charSize": 16,
+        "filepath": "assets/fonts/Coder's Crux.ttf"
+      },
+      {
+        "charSize": 32,
+        "filepath": "assets/fonts/Coder's Crux.ttf"
+      },
+      {
+        "charSize": 64,
+        "filepath": "assets/fonts/Coder's Crux.ttf"
+      },
+      {
+        "charSize": 16,
+        "filepath": "assets/fonts/steelfish outline.ttf"
+      },
+      {
+        "charSize": 32,
+        "filepath": "assets/fonts/steelfish outline.ttf"
+      },
+      {
+        "charSize": 64,
+        "filepath": "assets/fonts/steelfish outline.ttf"
+      }
+    ]
+  },
+  "camera": {
+    "position": {
+      "x": 0.0,
+      "y": 1.0,
+      "z": -10.5
+    },
+    "rotation": {
+      "yaw": 0.0,
+      "pitch": 0.0
+    }
+  },
+  "renderer": {
+    "type": "Basic3D"
+  },
+  "MemoryInfo": {
+    "gameObjects": 2,
+    "2DGameobjects": 1,
+    "text": 0,
+    "materials": 0,
+    "mesh": 0,
+    "position": 3,
+    "texture": 0,
+    "lights": 1,
+    "cameras": 2,
+    "joints": 0
+  },
+  "GameObjects": [
+    {
+      "index": 0,
+      "layerName": "Default3D",
+      "name": "Light",
+      "tag": "Default",
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": -2.0,
+          "y": 4.0,
+          "z": -2.5
+        },
+        "rot": {
+          "x": 50.0,
+          "y": -30.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "light": {
+        "ambient": {
+          "r": 0.2,
+          "g": 0.2,
+          "b": 0.2
+        },
+        "pointdiffuse": {
+          "b": 0.0,
+          "g": 0.0,
+          "r": 0.0
+        },
+        "pointspecular": {
+          "b": 0.0,
+          "g": 0.0,
+          "r": 0.0
+        },
+        "directionaldiffuse": {
+          "b": 9.999899930335232e-07,
+          "g": 9.999899930335232e-07,
+          "r": 9.999999974752427e-07
+        },
+        "directionalspecular": {
+          "b": 9.999899930335232e-07,
+          "g": 9.999899930335232e-07,
+          "r": 9.999999974752427e-07
+        },
+        "attenuation": 0.09
+      }
+    },
+    {
+      "index": 1,
+      "layerName": "Default3D",
+      "name": "Camera",
+      "tag": "Default",
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": -10.5
+        },
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "camera": {
+        "type": "free3D",
+        "fov": 45.0,
+        "aspect": 1.33333,
+        "nearClip": 0.1,
+        "farClip": 100,
+        "updateMousePress": true,
+        "background": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "layers": [ "Default3D" ]
+      }
+    },
+    {
+      "index": 2,
+      "layerName": "Default2D",
+      "name": "UICamera",
+      "tag": "Default",
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "camera": {
+        "type": "fixed2D",
+        "left": 0.0,
+        "top": 0.0,
+        "width": 800.0,
+        "height": 600.0,
+        "layers": [ "Default2D" ]
+      }
+    }
+  ],
+  "3DLayers": [
+    { "name": "Default3D" }
+  ],
+  "2DLayers": [
+    { "name": "Default2D" }
+  ],
+  "tags": [
+    { "tag": "Default" } 
+  ],
+  "UBOs": [
+    {
+      "name": "Matrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ]
+    },
+    {
+      "name": "TextMatrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "ORTHOCAM_VIEWPROJ"
+        }
+      ]
+    }
+  ],
+  "RendererCommands": {
+    "init": [
+      {
+        "type": "SetClearColour",
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    ],
+    "predraw": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": true
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": true
+      },
+      {
+        "type": "ClearDepthColourBuffer"
+      }
+    ],
+    "postdraw": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": false
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": false
+      }
+    ],
+    "predrawUI": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      }
+    ],
+    "postdrawUI": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ]
+  }
+}

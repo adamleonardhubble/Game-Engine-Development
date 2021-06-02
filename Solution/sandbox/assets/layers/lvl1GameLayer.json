@@ -1,0 +1,328 @@
+{
+  "Asyncload": {
+    "shaders": [
+      { "filepath": "assets/shaders/texturedPhong2.glsl" }
+    ],
+    "textures": [
+      { "filepath": "assets/textures/letterCube.png" },
+      { "filepath": "assets/textures/numberCube.png" },
+      { "filepath": "assets/textures/Propane_a.png" },
+      { "filepath": "assets/textures/None.png" }
+    ],
+    "models": [
+      { "filepath": "assets/models/Propane_LOD3.obj" },
+      { "filepath": "assets/models/cube.obj" }
+    ]
+  },
+  "camera": {
+    "type": "1stPerson",
+    "update": false,
+    "fov": 45.0,
+    "aspectRatio": 1.333333,
+    "nearClip": 0.1,
+    "farClip": 100.0,
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -4.5
+    }
+  },
+  "renderer": {
+    "type": "Basic3D"
+  },
+  "MemoryInfo": {
+    "gameObjects": 3,
+    "text": 0,
+    "materials": 3,
+    "mesh": 3,
+    "position": 3,
+    "velocity": 3,
+    "texture": 2,
+    "colliders": 0,
+    "rigidbody": 0,
+    "controllers": 4,
+    "lights": 0,
+    "cameras": 0,
+    "luascript": 1,
+    "joints": 0
+  },
+  "GameObjects": [
+    {
+      "name": "TPCube",
+      "mesh": {
+        "model": "assets/models/cube.obj"
+      },
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/shaders/texturedPhong2.glsl"
+      },
+      "luascript": {
+        "Filepath": "assets/LuaScript/EngineLuaScriptTest.lua"
+      },
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": -1.5,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "textureSwitch": {
+        "tex1": "assets/textures/letterCube.png",
+        "tex2": "assets/textures/numberCube.png"
+      }
+    },
+    {
+      "name": "TPCube2",
+      "mesh": {
+        "model": "assets/models/cube.obj"
+      },
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/shaders/texturedPhong2.glsl"
+      },
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": -4.5,
+          "y": -0.6,
+          "z": 4.0
+        },
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.8,
+          "y": 0.8,
+          "z": 0.8
+        }
+      },
+      "velocity": {
+        "linear": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angular": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "rotate": {},
+      "texture": {
+        "diffuse": "assets/textures/numberCube.png",
+        "specular": "assets/textures/numberCube.png",
+        "normal": "assets/textures/None.png",
+        "depth": "assets/textures/None.png",
+        "heightScale": 0
+      }
+    },
+    {
+      "name": "Propane",
+      "mesh": {
+        "model": "assets/models/Propane_LOD3.obj"
+      },
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/shaders/texturedPhong2.glsl"
+      },
+      "position": {
+        "type": "values",
+        "trans": {
+          "x": 1.5,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.05,
+          "y": 0.05,
+          "z": 0.05
+        }
+      },
+      "velocity": {
+        "linear": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angular": {
+          "x": 0.0,
+          "y": 20.0,
+          "z": 0.0
+        }
+      },
+      "oscillate": {
+        "state": "down",
+        "time": 10.0
+      },
+      "texture": {
+        "diffuse": "assets/textures/Propane_a.png",
+        "specular": "assets/textures/Propane_a.png",
+        "normal": "assets/textures/None.png",
+        "depth": "assets/textures/None.png",
+        "heightScale": 0
+      }
+    }
+  ],
+  "Joints": [
+
+  ],
+  "UBOs": [
+    {
+      "name": "Matrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ]
+    },
+    {
+      "name": "LightPos",
+      "data": [
+        {
+          "type": "Float3",
+          "x": 1.0,
+          "y": 4.0,
+          "z": -6.0
+        },
+        {
+          "type": "pointer",
+          "var": "CAM_POS"
+        }
+      ]
+    },
+    {
+      "name": "Light",
+      "data": [
+        {
+          "type": "Float3",
+          "x": 0.3,
+          "y": 0.3,
+          "z": 0.3
+        },
+        {
+          "type": "Float3",
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        {
+          "type": "Float3",
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        {
+          "type": "Float3",
+          "x": 1.0,
+          "y": 0.02199999988079071,
+          "z": 0.0001
+        }
+      ]
+    }
+  ],
+  "RendererCommands": {
+    "init": [
+      {
+        "type": "SetClearColour",
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    ],
+    "predrawFramebuffer": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": true
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": true
+      },
+      {
+        "type": "ClearDepthColourBuffer"
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "type": "ClearDepthColourBuffer"
+      },
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": false
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": false
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ]
+  }
+}

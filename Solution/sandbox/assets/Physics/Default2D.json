@@ -1,0 +1,124 @@
+{
+  "3DLayer": false,
+  "Asyncload": {
+    "fonts": [
+      {
+        "charSize": 64,
+        "filepath": "assets/Physics/fonts/Coder's Crux.ttf"
+      }
+    ],
+    "models": [],
+    "shaders": [ { "filepath": "assets/Physics/shaders/text2.glsl" } ]
+  },
+  "GameObjects": [
+    {
+      "camera": {
+        "height": 600.0,
+        "layers": [ "Default2D" ],
+        "left": 0.0,
+        "top": 0.0,
+        "type": "fixed2D",
+        "width": 800.0
+      },
+      "index": 0,
+      "name": "UICamera",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "tag": "Default"
+    },
+    {
+      "index": 1,
+      "material": { "shader": "text" },
+      "name": "Text",
+      "position": { "type": "text" },
+      "tag": "Default",
+      "text": {
+        "charSize": 64,
+        "colour": {
+          "b": 0.0,
+          "g": 0.0,
+          "r": 1.0
+        },
+        "font": "Coder's Crux",
+        "position": {
+          "x": 15.0,
+          "y": 15.0
+        },
+        "rotation": 0.0,
+        "scale": 1.5,
+        "text": "Text"
+      },
+      "texture": { "diffuse": "text" }
+    }
+  ],
+  "MemoryInfo": {
+    "cameras": 1,
+    "colliders": 0,
+    "controllers": 0,
+    "gameObjects": 2,
+    "joints": 0,
+    "lights": 0,
+    "luascript": 0,
+    "materials": 1,
+    "mesh": 0,
+    "position": 2,
+    "rigidbody": 0,
+    "text": 1,
+    "texture": 1,
+    "velocity": 0
+  },
+  "RendererCommands": {
+    "postdrawFramebuffer": [
+      {
+        "enabled": false,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "enabled": false,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ],
+    "predrawFramebuffer": [
+      {
+        "enabled": true,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "enabled": true,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ]
+  },
+  "UBOs": [
+    {
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ],
+      "name": "TextMatrices"
+    }
+  ],
+  "renderer": { "type": "BasicText2D" }
+}

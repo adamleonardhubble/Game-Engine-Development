@@ -1,0 +1,24 @@
+{
+  "Load": {
+    "levels": [
+      {
+        "layers": [
+          {
+            "filepath": "assets/Physics/Main Layer.json",
+            "name": "Main Layer"
+          },
+          {
+            "filepath": "assets/Physics/Joint Layer.json",
+            "name": "Joint Layer"
+          },
+          {
+            "filepath": "assets/Physics/Default2D.json",
+            "name": "Default2D"
+          }
+        ],
+        "name": "Level 1"
+      }
+    ],
+    "projectName": "Physics"
+  }
+}

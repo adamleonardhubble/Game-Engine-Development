@@ -1,0 +1,981 @@
+{
+  "3DLayer": true,
+  "Asyncload": {
+    "models": [ { "filepath": "assets/Physics/models/Capsule.obj" } ],
+    "shaders": [ { "filepath": "assets/Physics/shaders/lighting.glsl" } ],
+    "textures": [
+      { "filepath": "assets/Physics/textures/None.png" },
+      { "filepath": "assets/Physics/textures/wood.png" },
+      { "filepath": "assets/Physics/textures/numberCube.png" }
+    ]
+  },
+  "GameObjects": [
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 5,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 0.07737407833337784,
+            "g": 0.07737407833337784,
+            "r": 0.563725471496582
+          },
+          "shininess": 31.999998092651367,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Fixed Capsule",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 5.0,
+          "y": 7.0,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 6,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 5.0,
+          "specular": {
+            "b": 0.25980135798454285,
+            "g": 0.25980135798454285,
+            "r": 0.2598039507865906
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 4.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/wood.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 16,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 2",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 3.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 17,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 3",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 2.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 18,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 5.0,
+          "specular": {
+            "b": 0.24509559571743011,
+            "g": 0.24509559571743011,
+            "r": 0.2450980544090271
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 4",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 1.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/wood.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures\\None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 19,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 5",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": 0.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 20,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 6",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": -0.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 21,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 31.999998092651367,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 7",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": -1.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/numberCube.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 22,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 8",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": -2.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.18000000715255737,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 23,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 9",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": -3.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "height": 0.5,
+        "mass": 1.0,
+        "radius": 0.20000000298023224,
+        "shape": "capsule"
+      },
+      "index": 24,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Capsule.obj" },
+      "name": "Falling Capsule 10",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "trans": {
+          "x": -4.5,
+          "y": 6.5,
+          "z": 5.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0010000000474974513
+        },
+        "type": "dynamic"
+      },
+      "tag": "Capsules",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    }
+  ],
+  "Joints": [
+    {
+      "anchorpoint": {
+        "x": 5.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Fixed Capsule",
+      "bodyB": "Falling Capsule",
+      "canCollide": false,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": 4.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "bodyA": "Falling Capsule",
+      "bodyB": "Falling Capsule 2",
+      "canCollide": false,
+      "isLimited": true,
+      "maxLimit": 85.0,
+      "minLimit": 0.0,
+      "type": "Hinge"
+    },
+    {
+      "anchorpoint": {
+        "x": 3.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 2",
+      "bodyB": "Falling Capsule 3",
+      "canCollide": false,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": 2.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.8999999761581421,
+        "z": 0.6000000238418579
+      },
+      "bodyA": "Falling Capsule 3",
+      "bodyB": "Falling Capsule 4",
+      "canCollide": false,
+      "isLimited": true,
+      "maxLimit": 85.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": 1.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 4",
+      "bodyB": "Falling Capsule 5",
+      "canCollide": false,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": 0.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 5",
+      "bodyB": "Falling Capsule 6",
+      "canCollide": false,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": -1.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 6",
+      "bodyB": "Falling Capsule 7",
+      "canCollide": true,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Ball and Socket"
+    },
+    {
+      "anchorpoint": {
+        "x": -2.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 7",
+      "bodyB": "Falling Capsule 8",
+      "canCollide": false,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    },
+    {
+      "anchorpoint": {
+        "x": -3.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 8",
+      "bodyB": "Falling Capsule 9",
+      "canCollide": true,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Ball and Socket"
+    },
+    {
+      "anchorpoint": {
+        "x": -4.0,
+        "y": 6.5,
+        "z": 5.0
+      },
+      "axis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "bodyA": "Falling Capsule 9",
+      "bodyB": "Falling Capsule 10",
+      "canCollide": true,
+      "isLimited": false,
+      "maxLimit": 0.0,
+      "minLimit": 0.0,
+      "type": "Fixed"
+    }
+  ],
+  "MemoryInfo": {
+    "cameras": 0,
+    "colliders": 11,
+    "controllers": 0,
+    "gameObjects": 11,
+    "joints": 10,
+    "lights": 0,
+    "luascript": 0,
+    "materials": 11,
+    "mesh": 11,
+    "position": 11,
+    "rigidbody": 11,
+    "text": 0,
+    "texture": 11,
+    "velocity": 0
+  },
+  "RendererCommands": {
+    "init": [
+      {
+        "a": 0.0,
+        "b": 0.0,
+        "g": 0.0,
+        "r": 0.0,
+        "type": "SetClearColour"
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "enabled": false,
+        "type": "SetDepthTestLess"
+      },
+      {
+        "enabled": false,
+        "type": "SetBackfaceCulling"
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "enabled": false,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ],
+    "predrawFramebuffer": [
+      {
+        "enabled": true,
+        "type": "SetDepthTestLess"
+      },
+      {
+        "enabled": true,
+        "type": "SetBackfaceCulling"
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "enabled": true,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ]
+  },
+  "UBOs": [
+    {
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ],
+      "name": "Matrices"
+    }
+  ],
+  "renderer": { "type": "Basic3D" }
+}

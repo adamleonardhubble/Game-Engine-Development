@@ -1,0 +1,143 @@
+{
+  "Asyncload": {
+    "shaders": [
+      { "filepath": "assets/shaders/text2.glsl" }
+    ],
+    "fonts": [
+      {
+        "filepath": "assets/fonts/arial_narrow_7/arial_narrow_7.ttf",
+        "charSize": 64
+      },
+      {
+        "filepath": "assets/fonts/arial_narrow_7/arial_narrow_7.ttf",
+        "charSize": 32
+      }
+    ]
+  },
+  "camera": {
+    "type": "FreeOrtho2D",
+    "update": true,
+    "top": 0.0,
+    "left": 0.0,
+    "width": 800.0,
+    "height": 600.0
+  },
+  "renderer": {
+    "type": "BasicText2D"
+  },
+  "MemoryInfo": {
+    "gameObjects": 2,
+    "text": 2,
+    "materials": 2,
+    "mesh": 0,
+    "position": 2,
+    "velocity": 0,
+    "texture": 2,
+    "colliders": 0,
+    "rigidbody": 0,
+    "controllers": 0,
+    "lights": 0,
+    "cameras": 0,
+    "luascript": 0,
+    "joints": 0
+  },
+  "GameObjects": [
+    {
+      "name": "HeaderLabel",
+      "text": {
+        "text": "Level 1",
+        "font": "arial_narrow_7",
+        "charSize": 64,
+        "position": {
+          "x": 250,
+          "y": 50
+        },
+        "rotation": 0,
+        "scale": 1.2,
+        "colour": {
+          "r": 0.8,
+          "g": 0,
+          "b": 0.2
+        }
+      },
+      "material": {
+        "text": {}
+      },
+      "position": {
+        "type": "text"
+      },
+      "texture": {
+        "diffuse": "text"
+      }
+    },
+    {
+      "name": "FooterLabel",
+      "text": {
+        "text": "Footer",
+        "font": "arial_narrow_7",
+        "charSize": 32,
+        "position": {
+          "x": 50,
+          "y": 490
+        },
+        "rotation": 0,
+        "scale": 1.4,
+        "colour": {
+          "r": 0.2,
+          "g": 0.8,
+          "b": 0.2
+        }
+      },
+      "material": {
+        "text": {}
+      },
+      "position": {
+        "type": "text"
+      },
+      "texture": {
+        "diffuse": "text"
+      }
+    }
+  ],
+  "UBOs": [
+    {
+      "name": "TextMatrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ]
+    }
+  ]
+  ,
+  "RendererCommands": {
+    "predrawFramebuffer": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      },
+      {
+        "type": "ClearColourBuffer"
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ]
+  }
+} 

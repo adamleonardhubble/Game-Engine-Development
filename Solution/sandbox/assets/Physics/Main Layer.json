@@ -1,0 +1,1255 @@
+{
+  "3DLayer": true,
+  "Asyncload": {
+    "models": [
+      { "filepath": "assets/Physics/models/Sphere.obj" },
+      { "filepath": "assets/Physics/models/Cube.obj" },
+      { "filepath": "assets/Physics/models/Propane_LOD3.obj" },
+      { "filepath": "assets/Physics/models/Quad.obj" },
+      { "filepath": "assets/Physics/models/person.obj" }
+    ],
+    "shaders": [ { "filepath": "assets/Physics/shaders/lighting.glsl" } ],
+    "textures": [
+      { "filepath": "assets/Physics/textures/numberCube.png" },
+      { "filepath": "assets/Physics/textures/None.png" },
+      { "filepath": "assets/Physics/textures/box.png" },
+      { "filepath": "assets/Physics/textures/container2_specular.png" },
+      { "filepath": "assets/Physics/textures/letterCube.png" },
+      { "filepath": "assets/Physics/textures/Propane_a.png" },
+      { "filepath": "assets/Physics/textures/bricks2.jpg" },
+      { "filepath": "assets/Physics/textures/bricks2_normal.jpg" },
+      { "filepath": "assets/Physics/textures/bricks2_disp.jpg" },
+      { "filepath": "assets/Physics/textures/wall.jpg" },
+      { "filepath": "assets/Physics/textures/wallNormal.jpg" },
+      { "filepath": "assets/Physics/textures/seamless_green_grass_rough_DIFFUSE.jpg" },
+      { "filepath": "assets/Physics/textures/seamless_green_grass_rough_NORMAL.jpg" },
+      { "filepath": "assets/Physics/textures/wood.png" },
+      { "filepath": "assets/Physics/textures/toy_box_normal.png" },
+      { "filepath": "assets/Physics/textures/toy_box_disp.png" }
+    ]
+  },
+  "GameObjects": [
+    {
+      "index": 0,
+      "light": {
+        "ambient": {
+          "b": 0.22548794746398926,
+          "g": 0.22548794746398926,
+          "r": 0.22549021244049072
+        },
+        "attenuation": 0.15399999916553497,
+        "directionaldiffuse": {
+          "b": 0.8872460126876831,
+          "g": 0.8872533440589905,
+          "r": 0.8872548937797546
+        },
+        "directionalspecular": {
+          "b": 0.9999899864196777,
+          "g": 0.9999899864196777,
+          "r": 1.0
+        },
+        "pointdiffuse": {
+          "b": 0.17367804050445557,
+          "g": 0.3480392098426819,
+          "r": 0.15695884823799133
+        },
+        "pointspecular": {
+          "b": 0.9999899864196777,
+          "g": 0.9999899864196777,
+          "r": 1.0
+        }
+      },
+      "name": "Light",
+      "position": {
+        "rot": {
+          "x": 70.0,
+          "y": -90.0,
+          "z": 30.000001907348633
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -20.0,
+          "y": 10.0,
+          "z": -17.0
+        },
+        "type": "values"
+      },
+      "tag": "Default"
+    },
+    {
+      "camera": {
+        "aspect": 1.3333300352096558,
+        "farClip": 100.0,
+        "fov": 45.0,
+        "layers": [ "Main Layer", "Joint Layer" ],
+        "nearClip": 0.10000000149011612,
+        "type": "free3D",
+        "updateMousePress": true
+      },
+      "index": 1,
+      "name": "Camera",
+      "position": {
+        "rot": {
+          "x": -30.000001907348633,
+          "y": 29.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -9.0,
+          "y": 10.0,
+          "z": -17.0
+        },
+        "type": "values"
+      },
+      "tag": "Default"
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "mass": 5.0,
+        "radius": 0.5,
+        "shape": "sphere"
+      },
+      "index": 2,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 31.999998092651367,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Sphere.obj" },
+      "name": "Falling Sphere",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -0.30000001192092896,
+          "y": 2.5,
+          "z": 10.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.30000001192092896,
+          "rollingResistance": 0.10000000149011612
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/numberCube.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/numberCube.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 3,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 446.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Cube.obj" },
+      "name": "Box",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": -25.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -1.0,
+          "y": -2.0,
+          "z": 1.7000000476837158
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": false,
+        "material": {
+          "bounciness": 0.30000001192092896,
+          "friction": 0.699999988079071,
+          "rollingResistance": 0.5
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/box.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/container2_specular.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 0.5,
+          "y": 5.0,
+          "z": 0.5
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 4,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 0.6274446845054626,
+            "g": 0.6274446845054626,
+            "r": 0.6274509429931641
+          },
+          "shininess": 1505.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Cube.obj" },
+      "name": "Ramp",
+      "position": {
+        "rot": {
+          "x": 65.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 10.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -0.30000001192092896,
+          "y": -1.5,
+          "z": 6.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.4000000059604645,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 7,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 435.5,
+          "specular": {
+            "b": 0.4411720633506775,
+            "g": 0.4411720633506775,
+            "r": 0.44117647409439087
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Cube.obj" },
+      "name": "Bounce Cube",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.699999988079071,
+          "friction": 0.15000000596046448,
+          "rollingResistance": 0.0
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/letterCube.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/letterCube.png"
+      }
+    },
+    {
+      "index": 8,
+      "luascript": { "Filepath": "assets/Physics/LuaScript/EngineLuaScriptTest.lua" },
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 5.0,
+          "specular": {
+            "b": 0.19607645273208618,
+            "g": 0.19607645273208618,
+            "r": 0.19607841968536377
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Propane_LOD3.obj" },
+      "name": "Propane_LOD3",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.07000000029802322,
+          "y": 0.07000000029802322,
+          "z": 0.07000000029802322
+        },
+        "trans": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "type": "values"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/Propane_a.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/Propane_a.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 10.0,
+          "y": 0.004999999888241291,
+          "z": 5.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 9,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 78.5,
+          "specular": {
+            "b": 0.4091695547103882,
+            "g": 0.4091695547103882,
+            "r": 0.4215686321258545
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Far Wall",
+      "position": {
+        "rot": {
+          "x": -90.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 20.0,
+          "y": 1.0,
+          "z": 10.0
+        },
+        "trans": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 11.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/bricks2_disp.jpg",
+        "diffuse": "assets/Physics/textures/bricks2.jpg",
+        "heightScale": 0.05000000074505806,
+        "normal": "assets/Physics/textures/bricks2_normal.jpg",
+        "specular": "assets/Physics/textures/bricks2.jpg"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 2,
+        "halfExtents": {
+          "x": 12.0,
+          "y": 0.004999999888241291,
+          "z": 5.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 10,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 114.5,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Left Wall",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 90.0
+        },
+        "scale": {
+          "x": 24.0,
+          "y": 1.0,
+          "z": 10.0
+        },
+        "trans": {
+          "x": 10.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/wall.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/wallNormal.jpg",
+        "specular": "assets/Physics/textures/wall.jpg"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 5.0,
+          "y": 0.004999999888241291,
+          "z": 6.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 11,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 146.0,
+          "specular": {
+            "b": 0.2745070457458496,
+            "g": 0.2745070457458496,
+            "r": 0.2745097875595093
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Floor 1",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 1.0,
+          "z": 12.0
+        },
+        "trans": {
+          "x": 5.0,
+          "y": -5.0,
+          "z": 6.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/seamless_green_grass_rough_DIFFUSE.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/seamless_green_grass_rough_NORMAL.jpg",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 5.0,
+          "y": 0.004999999888241291,
+          "z": 6.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 12,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 146.0,
+          "specular": {
+            "b": 0.2745070457458496,
+            "g": 0.2745070457458496,
+            "r": 0.2745097875595093
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Floor 2",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 1.0,
+          "z": 12.0
+        },
+        "trans": {
+          "x": -5.0,
+          "y": -5.0,
+          "z": 6.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/seamless_green_grass_rough_DIFFUSE.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/seamless_green_grass_rough_NORMAL.jpg",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 5.0,
+          "y": 0.004999999888241291,
+          "z": 6.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 13,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 146.0,
+          "specular": {
+            "b": 0.2745070457458496,
+            "g": 0.2745070457458496,
+            "r": 0.2745097875595093
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Floor 3",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 1.0,
+          "z": 12.0
+        },
+        "trans": {
+          "x": 5.0,
+          "y": -5.0,
+          "z": -6.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/seamless_green_grass_rough_DIFFUSE.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/seamless_green_grass_rough_NORMAL.jpg",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 5.0,
+          "y": 0.004999999888241291,
+          "z": 6.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 14,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 146.0,
+          "specular": {
+            "b": 0.2745070457458496,
+            "g": 0.2745070457458496,
+            "r": 0.2745097875595093
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Floor 4",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 1.0,
+          "z": 12.0
+        },
+        "trans": {
+          "x": -5.0,
+          "y": -5.0,
+          "z": -6.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/seamless_green_grass_rough_DIFFUSE.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/seamless_green_grass_rough_NORMAL.jpg",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "halfExtents": {
+          "x": 12.0,
+          "y": 0.004999999888241291,
+          "z": 5.0
+        },
+        "mass": 1.0,
+        "shape": "box"
+      },
+      "index": 15,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 114.5,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "Right Wall",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": -90.0
+        },
+        "scale": {
+          "x": 24.0,
+          "y": 1.0,
+          "z": 10.0
+        },
+        "trans": {
+          "x": -10.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.10000000149011612,
+          "friction": 0.10000000149011612,
+          "rollingResistance": 0.0
+        },
+        "type": "static"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/wall.jpg",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/wallNormal.jpg",
+        "specular": "assets/Physics/textures/wall.jpg"
+      }
+    },
+    {
+      "index": 25,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 0.6372485160827637,
+            "g": 0.6372485160827637,
+            "r": 0.6372548937797546
+          },
+          "shininess": 152.0,
+          "specular": {
+            "b": 0.19117647409439087,
+            "g": 0.19117647409439087,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/person.obj" },
+      "name": "person",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": -90.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.029999999329447746,
+          "y": 0.029999999329447746,
+          "z": 0.029999999329447746
+        },
+        "trans": {
+          "x": 5.0,
+          "y": -5.0,
+          "z": -6.0
+        },
+        "type": "values"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures\\None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures\\None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "mass": 1.0,
+        "radius": 0.5,
+        "shape": "sphere"
+      },
+      "index": 26,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Sphere.obj" },
+      "name": "Sphere1",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": -5.0,
+          "y": 2.5,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.75,
+          "friction": 0.3499999940395355,
+          "rollingResistance": 0.10000000149011612
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "mass": 1.0,
+        "radius": 0.5,
+        "shape": "sphere"
+      },
+      "index": 27,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Sphere.obj" },
+      "name": "Sphere2",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.75,
+          "friction": 0.3499999940395355,
+          "rollingResistance": 0.10000000149011612
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "collider": {
+        "canCollideWith": [ 1, 2, 4, 8 ],
+        "collisionCategory": 1,
+        "mass": 1.0,
+        "radius": 0.5,
+        "shape": "sphere"
+      },
+      "index": 28,
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 32.0,
+          "specular": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Sphere.obj" },
+      "name": "Sphere3",
+      "position": {
+        "rot": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "trans": {
+          "x": 7.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "type": "values"
+      },
+      "rigidbody": {
+        "gravity": true,
+        "material": {
+          "bounciness": 0.75,
+          "friction": 0.3499999940395355,
+          "rollingResistance": 0.10000000149011612
+        },
+        "type": "dynamic"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/None.png",
+        "diffuse": "assets/Physics/textures/None.png",
+        "heightScale": 0.0,
+        "normal": "assets/Physics/textures/None.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    },
+    {
+      "index": 29,
+      "luascript": { "Filepath": "assets/Physics/LuaScript/Rotate Wall.lua" },
+      "material": {
+        "material": {
+          "diffuse": {
+            "b": 1.0,
+            "g": 1.0,
+            "r": 1.0
+          },
+          "shininess": 5.0,
+          "specular": {
+            "b": 0.07843058556318283,
+            "g": 0.07843058556318283,
+            "r": 0.07843136787414551
+          }
+        },
+        "shader": "assets/Physics/shaders/lighting.glsl"
+      },
+      "mesh": { "model": "assets/Physics/models/Quad.obj" },
+      "name": "thing",
+      "position": {
+        "rot": {
+          "x": -90.0,
+          "y": 45.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 2.0,
+          "y": 1.0,
+          "z": 2.0
+        },
+        "trans": {
+          "x": 4.0,
+          "y": 4.0,
+          "z": 2.0
+        },
+        "type": "values"
+      },
+      "tag": "Default",
+      "texture": {
+        "depth": "assets/Physics/textures/toy_box_disp.png",
+        "diffuse": "assets/Physics/textures/wood.png",
+        "heightScale": 0.10000000149011612,
+        "normal": "assets/Physics/textures/toy_box_normal.png",
+        "specular": "assets/Physics/textures/None.png"
+      }
+    }
+  ],
+  "Joints": [],
+  "MemoryInfo": {
+    "cameras": 1,
+    "colliders": 14,
+    "controllers": 0,
+    "gameObjects": 19,
+    "joints": 0,
+    "lights": 1,
+    "luascript": 2,
+    "materials": 17,
+    "mesh": 17,
+    "position": 19,
+    "rigidbody": 14,
+    "text": 0,
+    "texture": 17,
+    "velocity": 0
+  },
+  "RendererCommands": {
+    "init": [
+      {
+        "a": 0.0,
+        "b": 0.0,
+        "g": 0.0,
+        "r": 0.0,
+        "type": "SetClearColour"
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "enabled": false,
+        "type": "SetDepthTestLess"
+      },
+      {
+        "enabled": false,
+        "type": "SetBackfaceCulling"
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "enabled": false,
+        "type": "SetOneMinusAlphaBlending"
+      }
+    ],
+    "predrawFramebuffer": [
+      {
+        "enabled": true,
+        "type": "SetDepthTestLess"
+      },
+      {
+        "enabled": true,
+        "type": "SetBackfaceCulling"
+      },
+      { "type": "ClearDepthColourBuffer" }
+    ],
+    "predrawLayerTexture": [
+      {
+        "enabled": true,
+        "type": "SetOneMinusAlphaBlending"
+      },
+      { "type": "ClearDepthColourBuffer" }
+    ]
+  },
+  "UBOs": [
+    {
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ],
+      "name": "Matrices"
+    }
+  ],
+  "renderer": { "type": "Basic3D" }
+}

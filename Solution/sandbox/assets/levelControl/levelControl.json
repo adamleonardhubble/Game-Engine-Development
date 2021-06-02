@@ -1,0 +1,46 @@
+{
+  "Load": {
+    "levels": [
+      {
+        "name": "Level 1",
+        "layers": [
+          {
+            "name": "Game Layer",
+            "filepath": "assets/layers/lvl1GameLayer.json"
+          },
+          {
+            "name": "UI Layer",
+            "filepath": "assets/layers/lvl1UILayer.json"
+          }
+        ],
+        "load": {
+          "method": {
+            "button": "left"
+          }
+        }
+      },
+      {
+        "name": "Level 2",
+        "layers": [
+          {
+            "name": "Game Layer",
+            "filepath": "assets/layers/lvl2GameLayer.json"
+          },
+          {
+            "name": "UI Layer",
+            "filepath": "assets/layers/lvl2UILayer.json"
+          },
+          {
+            "name": "UI Layer 2",
+            "filepath": "assets/layers/lvl2UILayer2.json"
+          }
+        ],
+        "load": {
+          "method": {
+            "button": "right"
+          }
+        }
+      }
+    ]
+  }
+}

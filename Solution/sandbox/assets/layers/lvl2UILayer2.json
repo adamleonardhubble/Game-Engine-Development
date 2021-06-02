@@ -1,0 +1,132 @@
+{
+  "Asyncload": {
+    "shaders": [
+      { "filepath": "assets/shaders/text2.glsl" }
+    ]
+  },
+  "camera": {
+    "type": "FreeOrtho2D",
+    "update": false,
+    "top": 0.0,
+    "left": 0.0,
+    "width": 800.0,
+    "height": 600.0
+  },
+  "renderer": {
+    "type": "BasicText2D"
+  },
+  "MemoryInfo": {
+    "gameObjects": 2,
+    "text": 2,
+    "materials": 2,
+    "mesh": 0,
+    "position": 2,
+    "velocity": 0,
+    "texture": 2,
+    "colliders": 0,
+    "rigidbody": 0,
+    "controllers": 0,
+    "lights": 0,
+    "cameras": 0,
+    "luascript": 0,
+    "joints": 0
+  },
+  "GameObjects": [
+    {
+      "name": "Footer 1",
+      "text": {
+        "text": "Footer 1",
+        "font": "arial_narrow_7",
+        "charSize": 64,
+        "position": {
+          "x": 600,
+          "y": 300
+        },
+        "rotation": 0,
+        "scale": 0.9,
+        "colour": {
+          "r": 0.8,
+          "g": 0.2,
+          "b": 0.0
+        }
+      },
+      "material": {
+        "text": {}
+      },
+      "position": {
+        "type": "text"
+      },
+      "texture": {
+        "diffuse": "text"
+      }
+    },
+    {
+      "name": "Footer 2",
+      "text": {
+        "text": "Text Label 3",
+        "font": "steelfish eb",
+        "charSize": 32,
+        "position": {
+          "x": 50,
+          "y": 490
+        },
+        "rotation": 0,
+        "scale": 1.5,
+        "colour": {
+          "r": 0.2,
+          "g": 0.2,
+          "b": 0.8
+        }
+      },
+      "material": {
+        "text": {}
+      },
+      "position": {
+        "type": "text"
+      },
+      "texture": {
+        "diffuse": "text"
+      }
+    }
+  ],
+  "UBOs": [
+    {
+      "name": "TextMatrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ]
+    }
+  ],
+  "RendererCommands": {
+    "predrawFramebuffer": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      },
+      {
+        "type": "ClearColourBuffer"
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ]
+  }
+} 

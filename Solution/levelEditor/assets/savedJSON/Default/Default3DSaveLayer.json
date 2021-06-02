@@ -1,0 +1,91 @@
+{
+  "Asyncload": {
+    "shaders": [
+      { "filepath": "assets/shaders/lighting.glsl" }
+    ],
+    "textures": [
+      { "filepath": "assets/textures/default.png" }
+    ],
+    "models": [
+
+    ]
+  },
+  "renderer": {
+    "type": "Basic3D"
+  },
+  "MemoryInfo": {
+    "gameObjects": 0,
+    "text": 0,
+    "materials": 0,
+    "mesh": 0,
+    "position": 0,
+    "texture": 0,
+    "lights": 0,
+    "cameras": 0,
+    "velocity": 0,
+    "colliders": 0,
+    "rigidbody": 0,
+    "controllers": 0,
+    "joints": 0
+  },
+  "GameObjects": [
+
+  ],
+  "Joints": [
+
+  ],
+  "UBOs": [
+    {
+      "name": "Matrices",
+      "data": [
+        {
+          "type": "pointer",
+          "var": "CAM_VIEWPROJ"
+        }
+      ]
+    }
+  ],
+  "RendererCommands": {
+    "init": [
+      {
+        "type": "SetClearColour",
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    ],
+    "predrawFramebuffer": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": true
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": true
+      }
+    ],
+    "predrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": true
+      }
+    ],
+    "postdrawFramebuffer": [
+      {
+        "type": "SetDepthTestLess",
+        "enabled": false
+      },
+      {
+        "type": "SetBackfaceCulling",
+        "enabled": false
+      }
+    ],
+    "postdrawLayerTexture": [
+      {
+        "type": "SetOneMinusAlphaBlending",
+        "enabled": false
+      }
+    ]
+  }
+}

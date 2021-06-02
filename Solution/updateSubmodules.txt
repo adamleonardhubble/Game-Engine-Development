@@ -1,0 +1,9 @@
+Windows PowerShell (update submodules)
+
+1. Navigate to the '\vendor' directory of the Github repository, using the File Explorer application
+2. SHIFT + RightClick on the 'vendor' folder, select 'open powershell window here'
+3. A Windows PowerShell window will appear, once it has configured type the following:
+
+	git submodule update
+
+4. Allow time for the submodules to update, you will be prompted within the PowerShell window
