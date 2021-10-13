@@ -18,7 +18,7 @@ void UILayer::onAttach()
 	m_materials.push_back(std::make_shared<Engine::MaterialComponent>(Engine::MaterialComponent(label->getMaterial())));
 	m_text.push_back(std::make_shared<Engine::TextComponent>(Engine::TextComponent(label)));
 	m_positions.push_back(std::make_shared<Engine::PositionComponent>(Engine::PositionComponent(
-		glm::vec3(label->getPosition(), 0), glm::vec3(0, label->getOrientation(), 0), glm::vec3(label->getScale()))));
+	glm::vec3(label->getPosition(), 0), glm::vec3(0, label->getOrientation(), 0), glm::vec3(label->getScale()))));
 	//m_textures.push_back(std::make_shared<Engine::TextureComponent>(Engine::TextureComponent(m_pResources->getFontTexture())));
 
 	m_gameObjects.push_back(std::make_shared<Engine::GameObject>());
@@ -32,7 +32,7 @@ void UILayer::onAttach()
 	m_materials.push_back(std::make_shared<Engine::MaterialComponent>(Engine::MaterialComponent(label->getMaterial())));
 	m_text.push_back(std::make_shared<Engine::TextComponent>(Engine::TextComponent(label)));
 	m_positions.push_back(std::make_shared<Engine::PositionComponent>(Engine::PositionComponent(
-		glm::vec3(label->getPosition(), 0), glm::vec3(0, label->getOrientation(), 0), glm::vec3(label->getScale()))));
+	glm::vec3(label->getPosition(), 0), glm::vec3(0, label->getOrientation(), 0), glm::vec3(label->getScale()))));
 	//m_textures.push_back(std::make_shared<Engine::TextureComponent>(Engine::TextureComponent(m_pResources->getFontTexture())));
 
 	m_gameObjects.push_back(std::make_shared<Engine::GameObject>());
